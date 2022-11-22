@@ -1,5 +1,5 @@
 void main() {
-  int number = 2;
+  int number = 3;
   print(number);
   num number2 = 2.0;
   print(number2);
