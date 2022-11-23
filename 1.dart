@@ -1,21 +1,27 @@
 void main() {
-  int number = 3;
-  print(number);
-  num number2 = 2.0;
-  print(number2);
-  double number3 = 3;
-  print(number3);
-  String str = 'Uladzimir';
-  print(str);
-  final list = [1, 2, 3];
-  print(list);
-  final map = {1: 'one', 2: 'two', 3: 'three'};
-  final mapValue = map[2];
-  print(mapValue);
-  Set<int> set1 = {1, 2, 3, 5};
-  set1.add(2);
-  Runes runes = Runes('\u041F\u0440\u0438\u0432\u0435\u0442');
-  print(String.fromCharCodes(runes));
-  Symbol libName = #foo_lib;
-  print(libName);
+  var num = Numbers();
+  print(num.gcd(21, 77));
+  print(num.lcm(11, 3));
+}
+
+class Numbers {
+  int gcd(a, b) {
+    int c;
+    if (a < b) {
+      c = a;
+      a = b;
+      b = c;
+    }
+    while (b != 0) {
+      a %= b;
+      c = a;
+      a = b;
+      b = c;
+    }
+    return a;
+  }
+
+  int lcm(a, b) {
+    return a * b ~/ gcd(a, b);
+  }
 }
