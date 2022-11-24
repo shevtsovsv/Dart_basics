@@ -3,7 +3,9 @@ import 'dart:math';
 void main() {
   Point point = Point(0, 0, 0);
   print(point.distanceTo(3, 4, 0));
+
   print(point.distancePToP(5, 12, 3, 0, 0, 3));
+  print(point.distancePToP(3, 4, 3, 0, 0, 3));
   Point spont = Point.createPoint(type: "onez");
   spont.display();
 }
